@@ -64,4 +64,11 @@ tales of wisdom gained...
 --------------------------------------------------------------
 * Updated READ.md
 * Sketched out plan for the maze.
+
+2022-05-26
+--------------------------------------------------------------
+* Uploaded Team Flag (as pdf)
+* Wrote our proposal and uploaded it.
+* Confirmed on a short goal on testing the doableness of our plan. (Test on our lab rats)
 ==============================================================
+
