@@ -13,3 +13,4 @@ Your goal is to arm yourself with weapons, fight monsters, and find your way out
 labyrinth.
 
 #### How to Launch
+Run Woo.java and follow the given instructions.
