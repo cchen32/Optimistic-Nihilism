@@ -6,24 +6,6 @@ pd 6
 Maze RPG
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-USAGE:
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete this instruction block once all teammates understand usage.
-
-devlog--
-Use keyboard shortcut to jump to end,
- replicate entry template,
- modify appropriately.
-
-zone of reflection--
-Flesh out each category whenever necessary, appropriate.
- Need not be fully filled in until end of project,
- but best done as you go along.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
 OBSTACLES OVERCOME
@@ -70,5 +52,11 @@ tales of wisdom gained...
 * Uploaded Team Flag (as pdf)
 * Wrote our proposal and uploaded it.
 * Confirmed on a short goal on testing the doableness of our plan. (Test on our lab rats)
+* Started v0
 ==============================================================
 
+2022-05-27
+--------------------------------------------------------------
+* Continued v0
+* Started UML diagram
+==============================================================
