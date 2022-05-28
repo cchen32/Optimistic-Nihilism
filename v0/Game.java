@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Game{
   public int findKeyword(String statement, String goal, int startPos){
     String phrase = statement.trim().toLowerCase();
@@ -29,17 +31,22 @@ public class Game{
   // Do you want to start the game?
   public String Starting(String statement){
     String response = "";
+    // Scanner in = new Scanner(System.in);
     if (statement.trim().length() == 0){
-      response = "I need a response!";
+      response = "\nI need a response!";
+      // We need to recall the method so  that the conversation doesn't cut off after the empty response.
+      Scanner in = new Scanner(System.in);
+      String re0 = in.nextLine();
+      Starting(re0);
     }
     else if (findKeyword(statement, "no") >= 0){
-      response = "Enjoy your inevitable death.";
+      response = "\nEnjoy your inevitable death.";
     }
     else if (findKeyword(statement, "yes") >= 0){
-      response = "Great! Let's get started!";
+      response = "\nGreat! Let's get started!";
     }
     else{
-      response = "I need a valid response.";
+      response = "\nI need a valid response.";
     }
     return response;
   }

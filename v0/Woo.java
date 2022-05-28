@@ -13,6 +13,8 @@ public class Woo {
     System.out.println("Do you wish to procede?\n");
     Scanner in = new Scanner(System.in);
     String statement = in.nextLine();
-    System.out.println(rpg.Starting(statement));
+    String responseToStarting = rpg.Starting(statement);
+    System.out.println(responseToStarting);
+
   }
 }
