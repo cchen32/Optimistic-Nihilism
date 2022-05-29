@@ -33,11 +33,11 @@ public class Game{
     String statement = "";
     // Scanner in = new Scanner(System.in);
     if (response.trim().length() == 0){
-      statement = "\nI need a response!";
+      System.out.println("\nI need a response!");
       // We need to recall the method so  that the conversation doesn't cut off after the empty response.
       Scanner in = new Scanner(System.in);
       String re0 = in.nextLine();
-      Starting(re0);
+      return Starting(re0);
     }
     else if (findKeyword(response, "no") >= 0){
       statement = "\nEnjoy your inevitable death.";
