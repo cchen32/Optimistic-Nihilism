@@ -12,8 +12,8 @@ public class Woo {
     // Asks if player wants to play. Valid responses are "yes" and "no"
     System.out.println("Do you wish to procede?\n");
     Scanner in = new Scanner(System.in);
-    String statement = in.nextLine();
-    String responseToStarting = rpg.Starting(statement);
+    String response = in.nextLine();
+    String responseToStarting = rpg.Starting(response);
     System.out.println(responseToStarting);
 
   }

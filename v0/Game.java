@@ -29,25 +29,25 @@ public class Game{
   }
 
   // Do you want to start the game?
-  public String Starting(String statement){
-    String response = "";
+  public String Starting(String response){
+    String statement = "";
     // Scanner in = new Scanner(System.in);
-    if (statement.trim().length() == 0){
-      response = "\nI need a response!";
+    if (response.trim().length() == 0){
+      statement = "\nI need a response!";
       // We need to recall the method so  that the conversation doesn't cut off after the empty response.
       Scanner in = new Scanner(System.in);
       String re0 = in.nextLine();
       Starting(re0);
     }
-    else if (findKeyword(statement, "no") >= 0){
-      response = "\nEnjoy your inevitable death.";
+    else if (findKeyword(response, "no") >= 0){
+      statement = "\nEnjoy your inevitable death.";
     }
-    else if (findKeyword(statement, "yes") >= 0){
-      response = "\nGreat! Let's get started!";
+    else if (findKeyword(response, "yes") >= 0){
+      statement = "\nGreat! Let's get started!";
     }
     else{
-      response = "\nI need a valid response.";
+      statement = "\nI need a valid response.";
     }
-    return response;
+    return statement;
   }
 }

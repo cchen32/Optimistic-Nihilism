@@ -53,14 +53,13 @@ tales of wisdom gained...
 * Wrote our proposal and uploaded it.
 * Confirmed on a short goal on testing the doableness of our plan. (Test on our lab rats)
 * Started v0
-==============================================================
 
 2022-05-27
 --------------------------------------------------------------
 * Continued v0
 * Started UML diagram
 
-2022-05-27
+2022-05-28
 --------------------------------------------------------------
 * update gitignore with the version from the library
 * Caught the first bug at Line 34 of Game.java
