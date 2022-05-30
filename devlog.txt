@@ -63,4 +63,21 @@ tales of wisdom gained...
 --------------------------------------------------------------
 * update gitignore with the version from the library
 * Caught the first bug at Line 34 of Game.java
+
+2022-05-29
+--------------------------------------------------------------
+* Fixed bug
+* Added in more context to Game.java so that the name for the explorer is set
+* Expanded Hero + Monster
+* StartGame() is to be filled out to launch the maze
+* fight method written in Game.java
+* fixed some minor errors in Game.java regarding grammar
+
+2022-05-30
+--------------------------------------------------------------
+* Starting() function is all fixed and ready to be used
+  (it's been broken in as many ways as possible + formatting looks nice)
+* Added some white space to make things easier to read as code grows
+* Uploaded UML diagram, though it is still subjected to change as project evolves
+* Test maze created (no monster or mentors yet as we try to fill in code for maze.java)
 ==============================================================
