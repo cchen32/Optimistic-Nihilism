@@ -23,4 +23,14 @@ public class Maze{
   public String askDirection(){
     // to be filled out
   }
+
+  // Encounters a monster
+  public void monsterEncounter(/* probably takes in monster type*/){
+    // to be filled out
+  }
+
+  // Encounters a mentor
+  public void mentorEncounter(/* takes in mentor type*/) {
+    // to be filled out 
+  }
 }
