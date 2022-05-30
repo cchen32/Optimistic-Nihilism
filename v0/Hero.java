@@ -25,6 +25,11 @@ public class Hero extends Character{
     _inventory.push(item);
   }
 
+  // to peek at what you last add to the inventory
+  public Item peekInventory() {
+    return _inventory.peek();
+  }
+
   // use an item from the inventory (which give certain boosts)
   public Item useItem(){
     Item currItem = _inventory.peek();

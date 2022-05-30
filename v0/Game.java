@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Game{
   Hero player = new Hero();
 
+// -----------------------Helpers----------------------------| Start
+
   public int findKeyword(String statement, String goal, int startPos){
     String phrase = statement.trim().toLowerCase();
     goal = goal.toLowerCase();
@@ -29,6 +31,11 @@ public class Game{
   public int findKeyword(String statement, String goal){
     return findKeyword(statement, goal, 0);
   }
+// -----------------------Helpers----------------------------| End
+
+
+
+// -----------------------Methods----------------------------| Start
 
   // Asks for the player's name
   public String heroName(String response){
