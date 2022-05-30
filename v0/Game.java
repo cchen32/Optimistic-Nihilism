@@ -45,34 +45,35 @@ public class Game{
 
   // Do you want to start the game?
   public String starting(String response){
-    String statement = "";
     // no response
     if (response.trim().length() == 0){
-      System.out.println("\nI need a response!");
-      // We need to recall the method so  that the conversation doesn't cut off after the empty response.
+      System.out.println("\nI need a response!\n");
       Scanner in = new Scanner(System.in);
       String re0 = in.nextLine();
       return starting(re0);
     }
     // refuse the game
     else if (findKeyword(response, "no") >= 0){
-      statement = "\nEnjoy your inevitable death.";
+      return "\nEnjoy your inevitable death.";
     }
     // agreed to game
     else if (findKeyword(response, "yes") >= 0){
-      statement = "\nI wish you luck.";
-      startGame();
+      System.out.println("\nI wish you luck.\n");
+      return startGame();
     }
     // responses are not "yes" or "no"
     else{
-      statement = "\nI need a valid response.";
+      System.out.println("\nI need a valid response.\n");
+      Scanner in1 = new Scanner(System.in);
+      String re1 = in1.nextLine();
+      return starting(re1);
     }
-    return statement;
   }
 
   // Start the maze
   public String startGame(){
-    // to be filled out after Maze.java is done
+    // to be filled out after Maze.java is done]
+    return null;
   }
 
   // Fight between the player and the monster until one side has died
