@@ -11,7 +11,16 @@ public class Maze{
     String retStr = "[0;0H";
     int i, j;
     for (int i = 0; i < h; i++){
-      
+      for(j = 0; j < w; j++){
+        retstr = retStr + _maze[j][i];
+      }
+      retStr = retStr + "\n";
     }
+    return retStr;
+  }
+
+  // Asks the player to go to which direction
+  public String askDirection(){
+    // to be filled out
   }
 }

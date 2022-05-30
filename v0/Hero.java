@@ -2,7 +2,13 @@ import java.util.Stack;
 
 public class Hero extends Character{
   private String _name;
-  public Item[] _inventory;
+  public Stack<Item> _inventory;
+
+  public Hero(){
+    _health = 1000;
+    _attack = 300;
+    _name = "The Chosen One";
+  }
 
   public Hero(String name){
     _health = 1000;
