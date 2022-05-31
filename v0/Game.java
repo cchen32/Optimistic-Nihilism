@@ -51,29 +51,29 @@ public class Game{
   }
 
   // Do you want to start the game?
-  public String starting(String response){
+  public void starting(String response){
     // no response
     if (response.trim().length() == 0){
       System.out.println("\nI need a response!\n");
       Scanner in = new Scanner(System.in);
       String re0 = in.nextLine();
-      return starting(re0);
+      starting(re0);
     }
     // refuse the game
     else if (findKeyword(response, "no") >= 0){
-      return "\nEnjoy your inevitable death.";
+      System.out.println("\nEnjoy your inevitable death.");
     }
     // agreed to game
     else if (findKeyword(response, "yes") >= 0){
       System.out.println("\nI wish you luck.\n");
-      return startGame();
+      startGame();
     }
     // responses are not "yes" or "no"
     else{
       System.out.println("\nI need a valid response.\n");
       Scanner in1 = new Scanner(System.in);
       String re1 = in1.nextLine();
-      return starting(re1);
+      starting(re1);
     }
   }
 
@@ -98,8 +98,8 @@ public class Game{
 
   // Start the maze
   public void startGame(){
-
-    // Maze challenge = new Maze();
-
+    Maze challenge = new Maze();
+    // challenge.continueGame();
+    System.out.println(challenge);
   }
 }

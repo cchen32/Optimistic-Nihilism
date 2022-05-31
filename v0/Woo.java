@@ -18,6 +18,6 @@ public class Woo {
     // Asks if player wants to play. Valid responses are "yes" and "no"
     System.out.println("Do you wish to procede?\n");
     response = in.nextLine();
-    System.out.println(rpg.starting(response));
+    rpg.starting(response);
   }
 }
