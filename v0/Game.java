@@ -77,12 +77,6 @@ public class Game{
     }
   }
 
-  // Start the maze
-  public String startGame(){
-    // to be filled out after Maze.java is done]
-    return null;
-  }
-
   // Fight between the player and the monster until one side has died
   public void fight(Hero player, Monster mob){
     while (player.isAlive() && mob.isAlive()){
@@ -100,5 +94,12 @@ public class Game{
     else{
       System.out.println("Both sides have died. GG.");
     }
+  }
+
+  // Start the maze
+  public void startGame(){
+
+    // Maze challenge = new Maze();
+
   }
 }
