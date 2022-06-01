@@ -2,10 +2,10 @@ import java.io.*;
 import java.util.*;
 
 public class Maze{
-  public char[][] _maze;
+  private char[][] _maze;
   private int h, w;
-  public boolean validPath = true;
-  public boolean reachExit = false;
+  private boolean validPath = true;
+  private boolean reachExit = false;
 
   final private char HERO = '@';
   final private char PATH = '#';

@@ -14,3 +14,9 @@ labyrinth.
 
 #### How to Launch
 Run Woo.java and follow the given instructions.
+
+Once you get to the maze, use "w,s,d,a" to navigate:
+- w == up
+- s == down
+- a == left
+- d == right
