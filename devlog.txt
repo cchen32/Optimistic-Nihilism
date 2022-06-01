@@ -80,4 +80,9 @@ tales of wisdom gained...
 * Added some white space to make things easier to read as code grows
 * Uploaded UML diagram, though it is still subjected to change as project evolves
 * Test maze created (no monster or mentors yet as we try to fill in code for maze.java)
+
+2022-05-31
+--------------------------------------------------------------
+* Finished the general framework of the Maze, only a few more details are needed
+* Started a new version
 ==============================================================
