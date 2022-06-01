@@ -97,9 +97,9 @@ public class Game{
   }
 
   // Start the maze
-  public void startGame(){
-    Maze challenge = new Maze();
-    // challenge.continueGame();
-    System.out.println(challenge);
-  }
+  // public void startGame(){
+  //   Maze challenge = new Maze();
+  //   // challenge.continueGame();
+  //   System.out.println(challenge);
+  // }
 }
