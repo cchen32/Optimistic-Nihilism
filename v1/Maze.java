@@ -14,13 +14,13 @@ public class Maze{
   final private char WALL = ' ';
   final private char EXIT = '$';
 
-  public Maze(){//(String inputFile){
+  public Maze(String mfile){//(String inputFile){
     _maze = new char[80][25];
     h = 0;
     w = 0;
 
     try{
-      File myMaze = new File("01.maze");
+      File myMaze = new File(mfile);
       Scanner sc = new Scanner(myMaze);
       int row = 0;
        while (sc.hasNext()){

@@ -66,7 +66,12 @@ public class Game{
     // agreed to game
     else if (findKeyword(response, "yes") >= 0){
       System.out.println("\nI wish you luck.\n");
-      startGame();
+      System.out.println("Which level mystery would you like to challenge?\n");
+      String a = "\n1) Level 0: Trial";
+      String b = "\n2) Level 0: Trial Maze with one monster";
+      String dir = "\n\nPlease input numbers (ie 1 for option one) as a valid response. Thank you!";
+      System.out.println(a + b + dir);
+      mazeDecision();
     }
     // responses are not "yes" or "no"
     else{
@@ -76,10 +81,26 @@ public class Game{
       starting(re1);
     }
   }
+  // Choose maze level
+  public void mazeDecision(){
+    // System.out.println("Which level mystery would you like to challenge?\n");
+    Scanner in = new Scanner(System.in);
+    String res = in.nextLine();
+    if (res.trim().length() == 0){
+      System.out.println("I need a response, please!\n");
+      Scanner on = new Scanner(System.in);
+      String re = on.nextLine();
+      mazeDecision();
+    }
+    else if (findKeyword(res, "1") >= 0){
+      System.out.println("Gearing up Trial Maze 00");
+      startGame("00.maze");
+    }
+  }
 
   // Start the maze
-  public void startGame(){
-    Maze challenge = new Maze();
+  public void startGame(String mazeFile){
+    Maze challenge = new Maze(mazeFile);
     //challenge.continueMaze();
     System.out.println(challenge);
     while (!challenge.solved() && player.isAlive()){
