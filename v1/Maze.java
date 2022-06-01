@@ -2,6 +2,8 @@ import java.io.*;
 import java.util.*;
 
 public class Maze{
+  Hero mc = new Hero();
+
   private char[][] _maze;
   private int h, w;
   private boolean validPath = true;
@@ -18,7 +20,7 @@ public class Maze{
     w = 0;
 
     try{
-      File myMaze = new File("00.maze");
+      File myMaze = new File("01.maze");
       Scanner sc = new Scanner(myMaze);
       int row = 0;
        while (sc.hasNext()){
@@ -143,6 +145,11 @@ public class Maze{
       validPath = true;
       reachExit = false;
     }
+    else if (maze[x][y] == 'd'){
+      Monster dragQueen = new Dragon();
+      monsterEncounter(dragQueen);
+      validPath = mc.isAlive();
+    }
     // use "else if" for more cases of chosen path (e.g. monster encounter)
 
     // move the player
@@ -166,12 +173,32 @@ public class Maze{
   }
 
   // Encounters a monster
-  public void monsterEncounter(/* probably takes in monster type*/){
-    // to be filled out
+  public void monsterEncounter(Monster mob){
+    fight(mc, mob);
   }
 
   // Encounters a mentor
   public void mentorEncounter(/* takes in mentor type*/) {
     // to be filled out
   }
+
+  // Fight between the player and the monster until one side has died
+  public void fight(Hero player, Monster mob){
+    while (player.isAlive() && mob.isAlive()){
+      player.attack(mob);
+      if (mob.isAlive()){
+        mob.attack(player);
+      }
+    }
+    if (player.isAlive() && !mob.isAlive()){
+      System.out.println("You have slain the monster!");
+    }
+    else if (mob.isAlive() && !player.isAlive()){
+      System.out.println("K.O. Your journey ends here. RIP.");
+    }
+    else{
+      System.out.println("Both sides have died. GG.");
+    }
+  }
+
 }

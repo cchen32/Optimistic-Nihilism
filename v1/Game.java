@@ -77,33 +77,16 @@ public class Game{
     }
   }
 
-  // Fight between the player and the monster until one side has died
-  public void fight(Hero player, Monster mob){
-    while (player.isAlive() && mob.isAlive()){
-      player.attack(mob);
-      if (mob.isAlive()){
-        mob.attack(player);
-      }
-    }
-    if (player.isAlive() && !mob.isAlive()){
-      System.out.println("You have slain the monster!");
-    }
-    else if (mob.isAlive() && !player.isAlive()){
-      System.out.println("K.O. Your journey ends here. RIP.");
-    }
-    else{
-      System.out.println("Both sides have died. GG.");
-    }
-  }
-
   // Start the maze
   public void startGame(){
     Maze challenge = new Maze();
     //challenge.continueMaze();
     System.out.println(challenge);
-    while (!challenge.solved()){
+    while (!challenge.solved() && player.isAlive()){
       //System.out.println(challenge);
-      challenge.askDirection();
+      if (player.isAlive()){
+        challenge.askDirection();
+      }
     }
   }
 }
