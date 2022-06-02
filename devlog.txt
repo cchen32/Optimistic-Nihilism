@@ -85,4 +85,15 @@ tales of wisdom gained...
 --------------------------------------------------------------
 * Finished the general framework of the Maze, only a few more details are needed
 * Started a new version
+
+2022-06-01
+--------------------------------------------------------------
+* Fixed bug in Maze that wasn't allowing it to compile properly
+
+2022-06-02
+--------------------------------------------------------------
+* Moved to v1
+* Fixed some minor bugs in Maze, which allows players to go outside the wall
+* Created Dragon (first monster) -- Issue here because it's not working >:(
+* Created choices for maze level choosing so maze is no longer manually put in
 ==============================================================

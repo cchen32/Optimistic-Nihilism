@@ -69,7 +69,7 @@ public class Game{
       System.out.println("Which level mystery would you like to challenge?\n");
       String a = "\n1) Level 0: Trial";
       String b = "\n2) Level 0: Trial Maze with one monster";
-      String dir = "\n\nPlease input numbers (ie 1 for option one) as a valid response. Thank you!";
+      String dir = "\n\nPlease input numbers (ie 1 for option one) as a valid response. Thank you!\n";
       System.out.println(a + b + dir);
       mazeDecision();
     }
@@ -96,6 +96,10 @@ public class Game{
       System.out.println("Gearing up Trial Maze 00");
       startGame("00.maze");
     }
+    else if (findKeyword(res, "2") >= 0){
+      System.out.println("Gearing up Trial Maze 01");
+      startGame("01.maze");
+    }
   }
 
   // Start the maze
@@ -103,11 +107,19 @@ public class Game{
     Maze challenge = new Maze(mazeFile);
     //challenge.continueMaze();
     System.out.println(challenge);
-    while (!challenge.solved() && player.isAlive()){
-      //System.out.println(challenge);
-      if (player.isAlive()){
+    // while (!challenge.solved() && player.isAlive()){
+    //   System.out.println(player.isAlive());
+    //   //System.out.println(challenge);
+    //   if (player.isAlive()){
+    //     challenge.askDirection();
+    //   }
+    // }
+    while (!challenge.solved()){
+      while (player.isAlive()){
+        System.out.println(player.isAlive());
         challenge.askDirection();
       }
+      break;
     }
   }
 }

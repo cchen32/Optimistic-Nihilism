@@ -163,6 +163,11 @@ public class Maze{
       maze[x][y] = HERO;
       System.out.println(this);
     }
+    // else if (!validPath && !reachExit){
+    //   maze[row(maze)][column(maze)] = PATH;
+    //   maze[x][y] = HERO;
+    //   System.out.println(this);
+    // }
     else{
       System.out.println("You cannot move on further.");
     }
