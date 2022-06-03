@@ -1,7 +1,7 @@
 public class Item{
   // Instance variables
-  private int _healthBoost;
-  private int _attackBoost;
+  protected int _healthBoost;
+  protected int _attackBoost;
 
   // constructor
   public Item(){

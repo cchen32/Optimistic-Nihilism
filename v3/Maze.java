@@ -156,6 +156,11 @@ public class Maze{
       mentorEncounter(boringMentor);
       validPath = true;
     }
+    else if (maze[x][y] == 's'){
+      Sword newSword = new Sword();
+      mc.addItem(newSword);
+      mc.peekInventory();
+    }
     // use "else if" for more cases of chosen path (e.g. monster encounter)
 
     // move the player
