@@ -156,11 +156,11 @@ public class Maze{
       mentorEncounter(boringMentor);
       validPath = true;
     }
-    else if (maze[x][y] == 's'){
-      Sword newSword = new Sword();
-      mc.addItem(newSword);
-      mc.peekInventory();
-    }
+    // else if (maze[x][y] == 's'){
+    //   Sword newSword = new Sword();
+    //   mc.addItem(newSword);
+    //   mc.peekInventory();
+    // }
     // use "else if" for more cases of chosen path (e.g. monster encounter)
 
     // move the player
@@ -215,6 +215,8 @@ public class Maze{
   public void cont(){
     while (!solved()){
       while (mc.isAlive()){
+        // System.out.print("\033[H\033[2J");
+        // System.out.flush();
         askDirection();
       }
       break;
