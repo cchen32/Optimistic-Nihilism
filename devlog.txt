@@ -96,4 +96,9 @@ tales of wisdom gained...
 * Fixed some minor bugs in Maze, which allows players to go outside the wall
 * Created Dragon (first monster) -- Issue here because it's not working >:(
 * Created choices for maze level choosing so maze is no longer manually put in
+
+2022-06-03
+--------------------------------------------------------------
+* Worked on v2 which included mentors
+* Started on v3 for the weapons and inventory
 ==============================================================

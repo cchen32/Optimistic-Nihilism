@@ -156,11 +156,12 @@ public class Maze{
       mentorEncounter(boringMentor);
       validPath = true;
     }
-    // else if (maze[x][y] == 's'){
-    //   Sword newSword = new Sword();
-    //   mc.addItem(newSword);
-    //   mc.peekInventory();
-    // }
+    else if (maze[x][y] == 's'){
+      Sword newSword = new Sword();
+      mc.addItem(newSword);
+      validPath = true;
+      // mc.peekInventory();
+    }
     // use "else if" for more cases of chosen path (e.g. monster encounter)
 
     // move the player
@@ -185,7 +186,24 @@ public class Maze{
 
   // Encounters a monster
   public void monsterEncounter(Monster mob){
-    fight(mc, mob);
+    System.out.println("Would you like to an item?");
+    Scanner in = new Scanner(System.in);
+    String response = in.nextLine();
+    if (findKeyword(response, "yes") >= 0){
+      if (mc.emptyInventory()){
+        System.out.println("You have an empty inventory.");
+      }
+      else{
+        Item currItem = mc.peekInventory();
+        mc.useItem();
+        fight(mc, mob);
+        mc.afterItemUse(currItem);
+      }
+    }
+    else{
+      System.out.println("No item shall be used.");
+      fight(mc, mob);
+    }
   }
 
   // Encounters a mentor

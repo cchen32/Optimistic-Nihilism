@@ -20,6 +20,10 @@ public class Hero extends Character{
     return _name;
   }
 
+  public boolean emptyInventory(){
+    return _inventory.empty();
+  }
+
   // to add items to the inventory
   public void addItem(Item item){
     _inventory.push(item);
