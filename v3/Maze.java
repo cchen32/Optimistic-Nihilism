@@ -6,13 +6,14 @@ public class Maze{
 
   private char[][] _maze;
   private int h, w;
-  private boolean validPath = true;
-  private boolean reachExit = false;
+  private boolean validPath;
+  private boolean reachExit;
 
   final private char HERO = '@';
   final private char PATH = '#';
   final private char WALL = ' ';
   final private char EXIT = '$';
+  final private char SWORD = 's';
 
   public Maze(String mfile){//(String inputFile){
     _maze = new char[80][25];
@@ -83,7 +84,7 @@ public class Maze{
 
   // Get which column the player is on
   public int column(char[][] maze){
-    int x = 6;
+    int x = 0;
     for (int i = 0; i < maze.length; i++){
       for (int j = 0; j < maze[i].length; j++){
         if (maze[i][j] == HERO){
@@ -96,7 +97,7 @@ public class Maze{
 
   // Get which row the player is on
   public int row(char[][] maze){
-    int y = 4;
+    int y = 0;
     for (int i = 0; i < maze.length; i++){
       for (int j = 0; j < maze[i].length; j++){
         if (maze[i][j] == HERO){
@@ -141,10 +142,6 @@ public class Maze{
     else if (maze[x][y] == EXIT){
       reachExit = true;
     }
-    else if (maze[x][y] == PATH){
-      validPath = true;
-      reachExit = false;
-    }
     else if (maze[x][y] == 'd'){
       Monster dragQueen = new Dragon();
       monsterEncounter(dragQueen);
@@ -156,13 +153,19 @@ public class Maze{
       mentorEncounter(boringMentor);
       validPath = true;
     }
-    else if (maze[x][y] == 's'){
-      Item newSword = new Sword();
-      mc.addItem(newSword);
+    else if (maze[x][y] == SWORD){
+      System.out.println("sus");
+      // Item newSword = new Sword();
+      // mc.addItem(newSword);
+      // System.out.println(mc.peekInventory());
       validPath = true;
       // mc.peekInventory();
     }
     // use "else if" for more cases of chosen path (e.g. monster encounter)
+    else if (maze[x][y] == PATH){
+      reachExit = false;
+      validPath = true;
+    }
 
     // move the player
     if (validPath && reachExit){

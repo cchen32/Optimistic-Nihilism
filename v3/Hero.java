@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Hero extends Character{
   private String _name;
-  public Stack<Item> _inventory = new Stack();
+  Stack<Item> _inventory; //= new Stack();
 
   public Hero(){
     _health = 1000;
