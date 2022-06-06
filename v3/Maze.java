@@ -157,7 +157,7 @@ public class Maze{
       validPath = true;
     }
     else if (maze[x][y] == 's'){
-      Sword newSword = new Sword();
+      Item newSword = new Sword();
       mc.addItem(newSword);
       validPath = true;
       // mc.peekInventory();

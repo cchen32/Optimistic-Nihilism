@@ -1,8 +1,9 @@
 import java.util.Stack;
+import java.util.ArrayList;
 
 public class Hero extends Character{
   private String _name;
-  public Stack<Item> _inventory;
+  public Stack<Item> _inventory = new Stack();
 
   public Hero(){
     _health = 1000;
@@ -25,8 +26,8 @@ public class Hero extends Character{
   }
 
   // to add items to the inventory
-  public void addItem(Item item){
-    _inventory.push(item);
+  public Item addItem(Item item){
+    return _inventory.push(item);
   }
 
   // to peek at what you last add to the inventory
@@ -47,4 +48,10 @@ public class Hero extends Character{
     _health -= currItem.getHealthBoost();
     _attack -= currItem.getAttackBoost();
   }
+
+  // public static void main(String[] args){
+  //   Item something = new Sword();
+  //   addItem(something);
+  //   System.out.println(peekInventory());
+  // }
 }
