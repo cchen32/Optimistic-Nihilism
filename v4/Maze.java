@@ -148,6 +148,7 @@ public class Maze{
       validPath = mc.isAlive();
     }
     else if(maze[x][y] == 'm'){
+      System.out.println("hi"); // debug
       String message = "Hope you survive, KAKAKAKAKAKAKAKA";
       Mentor boringMentor = new Mentor("boring mentor", message);
       mentorEncounter(boringMentor);
