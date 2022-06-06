@@ -6,8 +6,8 @@ public class Maze{
 
   private char[][] _maze;
   private int h, w;
-  private boolean validPath;
-  private boolean reachExit;
+  private boolean validPath = true;
+  private boolean reachExit = false;
 
   final private char HERO = '@';
   final private char PATH = '#';
@@ -142,31 +142,28 @@ public class Maze{
     else if (maze[x][y] == EXIT){
       reachExit = true;
     }
+    else if (maze[x][y] == PATH){
+      validPath = true;
+      reachExit = false;
+    }
     else if (maze[x][y] == 'd'){
       Monster dragQueen = new Dragon();
       monsterEncounter(dragQueen);
       validPath = mc.isAlive();
     }
     else if(maze[x][y] == 'm'){
-      System.out.println("hi"); // debug
       String message = "Hope you survive, KAKAKAKAKAKAKAKA";
       Mentor boringMentor = new Mentor("boring mentor", message);
       mentorEncounter(boringMentor);
-      validPath = true;
     }
     else if (maze[x][y] == SWORD){
-      System.out.println("sus");
-      // Item newSword = new Sword();
-      // mc.addItem(newSword);
-      // System.out.println(mc.peekInventory());
-      validPath = true;
+      Item newSword = new Sword();
+      mc.addItem(newSword);
+      System.out.println(mc.peekInventory());
       // mc.peekInventory();
     }
     // use "else if" for more cases of chosen path (e.g. monster encounter)
-    else if (maze[x][y] == PATH){
-      reachExit = false;
-      validPath = true;
-    }
+
 
     // move the player
     if (validPath && reachExit){
@@ -235,11 +232,14 @@ public class Maze{
   }
 
   public void cont(){
-    while (!solved()){
-      while (mc.isAlive()){
-        askDirection();
-      }
-      break;
+    // while (!solved()){
+    //   while (mc.isAlive()){
+    //     askDirection();
+    //   }
+    //   break;
+    // }
+    while (!solved() && mc.isAlive()){
+      askDirection();
     }
   }
 

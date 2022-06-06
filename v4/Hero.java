@@ -3,7 +3,7 @@ import java.util.Stack;
 
 public class Hero extends Character{
   private String _name;
-  Stack<Item> _inventory; //= new Stack();
+  Stack<Item> _inventory = new Stack();
 
   public Hero(){
     _health = 1000;
