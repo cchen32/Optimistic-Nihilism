@@ -101,4 +101,10 @@ tales of wisdom gained...
 --------------------------------------------------------------
 * Worked on v2 which included mentors
 * Started on v3 for the weapons and inventory
+
+2022-06-04
+--------------------------------------------------------------
+* Fixed previous bug regarding Sword()
+* Included a new section regarding monsterEncounter()
+* Touched grass
 ==============================================================

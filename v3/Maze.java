@@ -233,8 +233,6 @@ public class Maze{
   public void cont(){
     while (!solved()){
       while (mc.isAlive()){
-        // System.out.print("\033[H\033[2J");
-        // System.out.flush();
         askDirection();
       }
       break;
