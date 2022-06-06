@@ -13,10 +13,11 @@ Your goal is to arm yourself with weapons, fight monsters, and find your way out
 labyrinth.
 
 #### How to Launch
-Run Woo.java and follow the given instructions.
+1. For the peace of mind, run `javac *.java` instead of `javac Woo.java`
+2. From there, run `java Woo` and the Mysterious Maze shall be launched.
 
-Once you get to the maze, use "w,s,d,a" to navigate:
-- w == up
-- s == down
-- a == left
-- d == right
+##### How to Navigate the Maze?
+- `w` == up
+- `s` == down
+- `a` == left
+- `d` == right
