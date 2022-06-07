@@ -40,7 +40,10 @@ public class Maze{
        }
        h++;
        row++;
-    } catch(Exception e) { System.out.println("Thick fog surround the maze, you cannot go through."); }
+    }
+    catch(Exception e){
+      System.out.println("Thick fog surround the maze, you cannot go through.");
+    }
   }
 
   public int findKeyword(String statement, String goal, int startPos){
@@ -159,8 +162,9 @@ public class Maze{
     else if (maze[x][y] == SWORD){
       Item newSword = new Sword();
       mc.addItem(newSword);
-      System.out.println(mc.peekInventory());
-      // mc.peekInventory();
+      System.out.println("You have chosen to collect " + newSword.getName() + ".");
+      Item checkSword = mc.peekInventory();
+      System.out.println(checkSword.toString());
     }
     // use "else if" for more cases of chosen path (e.g. monster encounter)
 
@@ -232,7 +236,7 @@ public class Maze{
   }
 
   public void cont(){
-    while (!solved() && mc.isAlive()){ 
+    while (!solved() && mc.isAlive()){
       askDirection();
     }
   }

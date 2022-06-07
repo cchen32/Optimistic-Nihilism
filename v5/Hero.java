@@ -43,15 +43,26 @@ public class Hero extends Character{
     return _inventory.pop();
   }
 
+  public Item popItem(){
+    return _inventory.pop();
+  }
+
   // after using an item from the inventory, the effects wear off
   public void afterItemUse(Item currItem){
     _health -= currItem.getHealthBoost();
     _attack -= currItem.getAttackBoost();
   }
 
-  // public static void main(String[] args){
-  //   Item something = new Sword();
-  //   addItem(something);
-  //   System.out.println(peekInventory());
-  // }
+  public String toString() {
+    String retVal = "";
+    retVal += "Inventory: ";
+    retVal += "[";
+    for (int i = 0; i < _inventory.size(); i++){
+      Item hold = _inventory.popItem;
+      retVal += hold.getName();
+      retVal += " ";
+    }
+    retVal += "]"
+  }
+
 }
