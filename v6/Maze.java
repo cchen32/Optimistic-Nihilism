@@ -16,7 +16,7 @@ public class Maze{
   final private char SWORD = 's';
 
   public Maze(String mfile){
-    _maze = new char[80][25];
+    _maze = new char[128][128];
     h = 0;
     w = 0;
 
@@ -133,6 +133,7 @@ public class Maze{
       checkPath(_maze, row(_maze) + 1, column(_maze));
     }
     else {
+      System.out.println(this);
       System.out.println("Not an available option.");
     }
   }
@@ -163,8 +164,8 @@ public class Maze{
       Item newSword = new Sword();
       mc.addItem(newSword);
       System.out.println("You have chosen to collect " + newSword.getName() + ".");
-      Item checkSword = mc.peekInventory();
-      System.out.println(checkSword.toString());
+      // Item checkSword = mc.peekInventory();
+      // System.out.println(checkSword.toString());
     }
     // use "else if" for more cases of chosen path (e.g. monster encounter)
 
@@ -181,6 +182,7 @@ public class Maze{
       System.out.println(this);
     }
     else{
+      System.out.println(this);
       System.out.println("You cannot move on further.");
     }
   }
@@ -191,7 +193,7 @@ public class Maze{
 
   // Encounters a monster
   public void monsterEncounter(Monster mob){
-    System.out.println("Would you like to an item?");
+    System.out.println("Would you like to use an item?");
     Scanner in = new Scanner(System.in);
     String response = in.nextLine();
     if (findKeyword(response, "yes") >= 0){
@@ -237,7 +239,9 @@ public class Maze{
 
   public void cont(){
     while (!solved() && mc.isAlive()){
+      System.out.println("================================================\n");
       askDirection();
+      System.out.println("\n================================================");
     }
   }
 

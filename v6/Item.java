@@ -41,9 +41,9 @@ public class Item{
     return str;
   }
 
-  // @Override
-  // public String toString(){
-  //   return this.getName();
-  // }
+  @Override
+  public String toString(){
+    return this.getName();
+  }
 
 }

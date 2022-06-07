@@ -71,8 +71,9 @@ public class Game{
       String b = "\n2) Level 0: Trial Maze with one monster";
       String c = "\n3) Level 0: Trial Maze with Mentor";
       String d = "\n4) Level 0: Trial Maze with Sword";
+      String e = "\n5) Level 1: The Start";
       String dir = "\n\nPlease input numbers (ie 1 for option one) as a valid response. Thank you!\n";
-      System.out.println(a + b + c + d + dir);
+      System.out.println(a + b + c + d + e + dir);
       mazeDecision();
     }
     // responses are not "yes" or "no"
@@ -109,6 +110,10 @@ public class Game{
     else if (findKeyword(res, "4") >= 0){
       System.out.println("Gearing up Trial Maze 03");
       startGame("03.maze");
+    }
+    else if (findKeyword(res, "5") >= 0){
+      System.out.println("Gearing up Level 1");
+      startGame("04.maze");
     }
   }
 

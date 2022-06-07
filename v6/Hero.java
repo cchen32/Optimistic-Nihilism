@@ -1,5 +1,5 @@
 import java.util.Stack;
-//import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Hero extends Character{
   private String _name;
@@ -53,16 +53,57 @@ public class Hero extends Character{
     _attack -= currItem.getAttackBoost();
   }
 
-  public String toString() {
-    String retVal = "";
-    retVal += "Inventory: ";
-    retVal += "[";
-    for (int i = 0; i < _inventory.size(); i++){
-      Item hold = _inventory.popItem;
-      retVal += hold.getName();
-      retVal += " ";
+  public void askAttack(){
+    System.out.println("Your choices are: elbow, punch, kick, poke, pinch, tickle.");
+    Scanner in = new Scanner(System.in);
+    String response = in.nextLine();
+    if (findKeyword(response, "elbow") >= 0){
+
     }
-    retVal += "]"
+    else if (findKeyword(response, "punch") >= 0){
+
+    }
+    else if (findKeyword(response, "kick") >= 0){
+
+    }
+    else if (findKeyword(response, "poke") >= 0){
+
+    }
+    else if (findKeyword(response, "pinch") >= 0){
+
+    }
+    else if (findKeyword(response, "tickle") >= 0){
+
+    }
+    else {
+      System.out.println("We will resort to default attack.");
+    }
   }
 
+  public int findKeyword(String statement, String goal, int startPos){
+    String phrase = statement.trim().toLowerCase();
+    goal = goal.toLowerCase();
+
+    int psn = phrase.indexOf(goal, startPos);
+
+    while (psn >= 0){
+      String before = " ", after = " ";
+      if (psn > 0){
+        before = phrase.substring(psn - 1, psn);
+      }
+      if (psn + goal.length() < phrase.length()){
+        after = phrase.substring(psn + goal.length(), psn + goal.length() + 1);
+      }
+      if (((before.compareTo("a") < 0) || (before.compareTo("z") > 0))
+      && ((after.compareTo("a") < 0) || (after.compareTo("z") > 0))){
+        return psn;
+      }
+      psn = phrase.indexOf(goal, psn + 1);
+    }
+    return -1;
+  }
+
+  public int findKeyword(String statement, String goal){
+    return findKeyword(statement, goal, 0);
+  }
 }
