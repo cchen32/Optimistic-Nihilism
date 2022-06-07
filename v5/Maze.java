@@ -15,7 +15,7 @@ public class Maze{
   final private char EXIT = '$';
   final private char SWORD = 's';
 
-  public Maze(String mfile){//(String inputFile){
+  public Maze(String mfile){
     _maze = new char[80][25];
     h = 0;
     w = 0;
@@ -71,7 +71,7 @@ public class Maze{
   }
 
   public String toString(){
-    String retStr = "";//"[0;0H";
+    String retStr = "";
     int i, j;
     for (i = 0; i < h; i++){
       for(j = 0; j < w; j++){
@@ -132,8 +132,6 @@ public class Maze{
     else {
       System.out.println("Not an available option.");
     }
-    System.out.print("\033[H\033[2J");  
-    System.out.flush();  
   }
 
   // Check what the chosen path is like (x and y are the coordinates the player want to move to)
@@ -234,7 +232,7 @@ public class Maze{
   }
 
   public void cont(){
-    while (!solved() && mc.isAlive()){
+    while (!solved() && mc.isAlive()){ 
       askDirection();
     }
   }
