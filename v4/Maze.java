@@ -232,12 +232,6 @@ public class Maze{
   }
 
   public void cont(){
-    // while (!solved()){
-    //   while (mc.isAlive()){
-    //     askDirection();
-    //   }
-    //   break;
-    // }
     while (!solved() && mc.isAlive()){
       askDirection();
     }

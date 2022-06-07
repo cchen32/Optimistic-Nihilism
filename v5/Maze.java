@@ -132,6 +132,8 @@ public class Maze{
     else {
       System.out.println("Not an available option.");
     }
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();  
   }
 
   // Check what the chosen path is like (x and y are the coordinates the player want to move to)
@@ -232,12 +234,6 @@ public class Maze{
   }
 
   public void cont(){
-    // while (!solved()){
-    //   while (mc.isAlive()){
-    //     askDirection();
-    //   }
-    //   break;
-    // }
     while (!solved() && mc.isAlive()){
       askDirection();
     }

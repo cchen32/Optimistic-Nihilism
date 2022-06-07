@@ -115,7 +115,6 @@ public class Game{
   // Start the maze
   public void startGame(String mazeFile){
     Maze challenge = new Maze(mazeFile);
-    //challenge.continueMaze();
     System.out.println(challenge);
     challenge.cont();
   }
