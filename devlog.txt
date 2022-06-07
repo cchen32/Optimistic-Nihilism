@@ -111,4 +111,11 @@ tales of wisdom gained...
 2022-06-05
 --------------------------------------------------------------
 * Updated Readme instructions
+
+2022-06-05
+--------------------------------------------------------------
+* Fixed some more bugs regarding Sword()
+* Attempted to Stringify
+* Getting started on Big Maze
+* Fixed a bit of maze designs
 ==============================================================
