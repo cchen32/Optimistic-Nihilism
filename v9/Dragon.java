@@ -1,5 +1,5 @@
 public class Dragon extends Monster{
-  public int _scale;
+  protected int _scale;
 
   public Dragon() {
     super();
