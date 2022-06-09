@@ -138,4 +138,6 @@ tales of wisdom gained...
 2022-06-09
 --------------------------------------------------------------
 * Got the colors down!
+* Work on them chars colors
+* some more suspicious stuffs such as reorganizing how everything looks now
 ==============================================================

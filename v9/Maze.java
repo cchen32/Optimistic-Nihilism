@@ -15,12 +15,13 @@ public class Maze{
   final private char EXIT = '$';
   final private char SWORD = 's';
 
-  // public static final String ANSI_RESET = "\u001B[0m";
-  // public static final String ANSI_RED = "\u001B[31m";
-  // public static final String ANSI_GREEN = "\u001B[32m";
-  // public static final String ANSI_YELLOW = "\u001B[33m";
+  public static final String ANSI_RESET = "\u001B[0m";
+  public static final String ANSI_RED = "\u001B[31m";
+  public static final String ANSI_GREEN = "\u001B[32m";
+  public static final String ANSI_YELLOW = "\u001B[33m";
   // public static final String ANSI_BLUE = "\u001B[34m";
   // public static final String ANSI_PURPLE = "\u001B[35m";
+  public static final String ANSI_GRAY = "\u001b[30;1m";
 
   public Maze(String mfile){
     _maze = new char[256][256];
@@ -32,7 +33,7 @@ public class Maze{
       Scanner sc = new Scanner(myMaze);
       int row = 0;
        while (sc.hasNext()){
-         String line = sc.nextLine();
+         String line = ANSI_RED + sc.nextLine() + ANSI_RESET;
          if (w < line.length()){
            w = line.length();
          }
@@ -49,7 +50,7 @@ public class Maze{
        row++;
     }
     catch(Exception e){
-      System.out.println("Thick fog surround the maze, you cannot go through.");
+      System.out.println(ANSI_GRAY + "Thick fog surround the maze, you cannot go through." + ANSI_RESET);
     }
   }
 
@@ -120,19 +121,22 @@ public class Maze{
 
   // Asks the player to go to which direction
   public void askDirection(){
-    System.out.println("Choose a path.\n");
+    System.out.println(ANSI_GREEN + "Choose a path.\n" + ANSI_RESET);
     Scanner in = new Scanner(System.in);
     String response = in.nextLine();
     // up
     if (findKeyword(response, "w") >= 0){
+      System.out.println("================================================");
       checkPath(_maze, row(_maze), column(_maze) - 1);
     }
     // left
     else if (findKeyword(response, "a") >= 0){
+      System.out.println("================================================");
       checkPath(_maze, row(_maze) - 1, column(_maze));
     }
     // down
     else if (findKeyword(response, "s") >= 0){
+      System.out.println("================================================");
       checkPath(_maze, row(_maze), column(_maze) + 1);
     }
     // right
@@ -142,6 +146,7 @@ public class Maze{
     }
     else {
       System.out.println(this);
+      System.out.println("================================================");
       System.out.println("Not an available option.");
     }
   }
@@ -164,14 +169,14 @@ public class Maze{
       validPath = mc.isAlive();
     }
     else if(maze[x][y] == 'm'){
-      String message = "Hope you survive, KAKAKAKAKAKAKAKA";
+      String message = ANSI_RED + "Hope you survive, KAKAKAKAKAKAKAKA" + ANSI_RESET;
       Mentor boringMentor = new Mentor("boring mentor", message);
       mentorEncounter(boringMentor);
     }
     else if (maze[x][y] == SWORD){
       Item newSword = new Sword();
       mc.addItem(newSword);
-      System.out.println("You have chosen to collect " + newSword.getName() + ".");
+      System.out.println(ANSI_GREEN + "You have chosen to collect " + newSword.getName() + "." + ANSI_RESET);
     }
     // use "else if" for more cases of chosen path (e.g. monster encounter)
 
@@ -277,7 +282,7 @@ public class Maze{
 
   public void cont(){
     while (!solved() && mc.isAlive()){
-      System.out.println("================================================\n");
+      System.out.println("================================================");
       askDirection();
       System.out.println("\n================================================");
     }

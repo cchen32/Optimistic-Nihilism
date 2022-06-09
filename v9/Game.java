@@ -67,12 +67,12 @@ public class Game{
     // refuse the game
     else if (findKeyword(response, "no") >= 0){
       System.out.println(ANSI_RED + "\nEnjoy your inevitable death." + ANSI_RESET);
-      System.out.println("==========================================================================");
+      System.out.println("================================================");
     }
     // agreed to game
     else if (findKeyword(response, "yes") >= 0){
       System.out.println(ANSI_GREEN + "\nI wish you luck.\n" + ANSI_RESET);
-      System.out.println("=========================================================================");
+      System.out.println("================================================");
       System.out.println(ANSI_GREEN + "Which level mystery would you like to challenge?\n" + ANSI_RESET);
       String a = ANSI_BLUE + "\n1) Level 0: Trial" + ANSI_RESET;
       String b = ANSI_BLUE + "\n2) Level 0: Trial Maze with one monster" + ANSI_RESET;
@@ -108,18 +108,22 @@ public class Game{
       startGame("00.maze");
     }
     else if (findKeyword(res, "2") >= 0){
+      System.out.println("================================================");
       System.out.println(ANSI_YELLOW + "\nGearing up Trial Maze 01" + ANSI_RESET);
       startGame("01.maze");
     }
     else if (findKeyword(res, "3") >= 0){
+      System.out.println("================================================");
       System.out.println(ANSI_YELLOW + "\nGearing up Trial Maze 02" + ANSI_RESET);
       startGame("02.maze");
     }
     else if (findKeyword(res, "4") >= 0){
+      System.out.println("================================================");
       System.out.println(ANSI_YELLOW + "\nGearing up Trial Maze 03" + ANSI_RESET);
       startGame("03.maze");
     }
     else if (findKeyword(res, "5") >= 0){
+      System.out.println("================================================");
       System.out.println(ANSI_YELLOW + "\nGearing up Level 1" + ANSI_RESET);
       startGame("04.maze");
     }
@@ -132,12 +136,14 @@ public class Game{
     String res = in.nextLine();
     if (findKeyword(res, "yes") >= 0){
       System.out.println(ANSI_BLUE + "\nA guide to using controls:\n" + ANSI_RESET);
-      System.out.println(ANSI_BLUE + "Pressing 'w' will go up\n" + ANSI_RESET);
-      System.out.println(ANSI_BLUE + "Pressing 's' will go down\n" + ANSI_RESET);
-      System.out.println(ANSI_BLUE + "Pressing 'd' will go left\n" + ANSI_RESET);
-      System.out.println(ANSI_BLUE + "Pressing 'a' will go right" + ANSI_RESET);
+      System.out.println(ANSI_BLUE + "Pressing 'w' will go up" + ANSI_RESET);
+      System.out.println(ANSI_BLUE + "Pressing 's' will go down" + ANSI_RESET);
+      System.out.println(ANSI_BLUE + "Pressing 'd' will go left" + ANSI_RESET);
+      System.out.println(ANSI_BLUE + "Pressing 'a' will go right\n" + ANSI_RESET);
+      // System.out.println(ANSI_YELLOW + "Good luck and may the odds be ever in your favor" + ANSI_RESET);
     }
-    System.out.println("==========================================================================");
+    System.out.println(ANSI_YELLOW + "Good luck and may the odds be ever in your favor" + ANSI_RESET);
+    System.out.println("================================================");
   }
 
   // Start the maze
