@@ -1,0 +1,36 @@
+// import java.lang.Math;
+
+public class Character{
+  protected int _health;
+  protected int _attack;
+
+  public int getHealth(){
+    return _health;
+  }
+
+  public int getAttack(){
+    return _attack;
+  }
+
+  public boolean isAlive(){
+    return _health >= 0;
+  }
+
+  public void receiveAttack(int damage){
+    _health = _health - damage;
+  }
+
+  public int attack(Character opponent){
+    int damage = _attack;
+    opponent.receiveAttack(damage);
+    _health -= damage % 32;
+    return damage;
+  }
+
+  // public int elbow(Character opponent){
+  //   int damage = _attack + (int)(Math.random() * 10);
+  //   opponent.receiveAttack(damage);
+  //   _health -= 5;
+  //   return damage;
+  // }
+}
