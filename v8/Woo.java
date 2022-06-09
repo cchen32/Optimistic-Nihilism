@@ -2,14 +2,15 @@ import java.util.Scanner;
 
 public class Woo {
   // Launch pad
+  public static final String ANSI_RESET = "\u001B[0m";
+  public static final String ANSI_GREEN = "\u001B[32m";
 
   public static void main(String[] args) {
     Game rpg = new Game();
 
     // Greet the travellers/explorers
     // System.out.println("\nWelcome, Explorer, to the Mysterious Cave of the Unknown.\n");
-    String welcome = "\nWelcome, Explorer, to the Mysterious Cave of the Unknown.\n";
-    Text.colorize(welcome, 30);
+    System.out.println(ANSI_GREEN + "\nWelcome, Explorer, to the Mysterious Cave of the Unknown.\n" + ANSI_RESET);
 
     // Asks for the player's name
     System.out.println("What is your name, chosen hero?\n");

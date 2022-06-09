@@ -134,4 +134,8 @@ tales of wisdom gained...
 * Attack options completed
 * Fixing minor errors such as commented code and typos
 * Also adding in more line spacing
+
+2022-06-09
+--------------------------------------------------------------
+* Got the colors down!
 ==============================================================
