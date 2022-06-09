@@ -118,4 +118,20 @@ tales of wisdom gained...
 * Attempted to Stringify
 * Getting started on Big Maze
 * Fixed a bit of maze designs
+
+2022-06-06
+--------------------------------------------------------------
+* Stringify done!
+* Attempting to colorize text -- failing
+
+2022-06-07
+--------------------------------------------------------------
+* Continued attempt to colorize
+* Starting on more options for Attack
+
+2022-06-08
+--------------------------------------------------------------
+* Attack options completed
+* Fixing minor errors such as commented code and typos
+* Also adding in more line spacing
 ==============================================================
