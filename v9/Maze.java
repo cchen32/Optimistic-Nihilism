@@ -120,8 +120,6 @@ public class Maze{
 
   // Asks the player to go to which direction
   public void askDirection(){
-    System.out.println("\033[H\033[2J");
-    System.out.flush();
     System.out.println("Choose a path.\n");
     Scanner in = new Scanner(System.in);
     String response = in.nextLine();
@@ -139,7 +137,7 @@ public class Maze{
     }
     // right
     else if (findKeyword(response, "d") >= 0){
-      System.out.println("==================================");
+      System.out.println("================================================");
       checkPath(_maze, row(_maze) + 1, column(_maze));
     }
     else {
