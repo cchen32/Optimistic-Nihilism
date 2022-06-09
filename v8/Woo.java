@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Woo {
   // Launch pad
@@ -11,6 +12,7 @@ public class Woo {
     // Greet the travellers/explorers
     // System.out.println("\nWelcome, Explorer, to the Mysterious Cave of the Unknown.\n");
     System.out.println(ANSI_GREEN + "\nWelcome, Explorer, to the Mysterious Cave of the Unknown.\n" + ANSI_RESET);
+    Thread.sleep(1000);
 
     // Asks for the player's name
     System.out.println("What is your name, chosen hero?\n");
