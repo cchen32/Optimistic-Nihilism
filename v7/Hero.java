@@ -57,7 +57,7 @@ public class Hero extends Character{
   public int tickle(Character opponent){
     opponent.receiveAttack(100);
     _health += 50;
-    return damage;
+    return 100;
   }
 
   public int poke(Character opponent){

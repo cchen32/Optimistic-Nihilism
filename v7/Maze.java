@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class Maze{
-  Hero mc = new Character();
+  Hero mc = new Hero();
 
   private char[][] _maze;
   private int h, w;
@@ -251,7 +251,8 @@ public class Maze{
   // Fight between the player and the monster until one side has died
   public void fight(Hero player, Monster mob){
     while (player.isAlive() && mob.isAlive()){
-      // player.attack(mob);
+      System.out.println("Your health is " + player.getHealth());
+      System.out.println("The monster's health is " + mob.getHealth());
       askAttack(player, mob);
       if (mob.isAlive()){
         mob.attack(player);
