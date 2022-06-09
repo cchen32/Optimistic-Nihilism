@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
+// import java.util.concurrent.TimeUnit;
 
 public class Woo {
   // Launch pad
@@ -12,17 +12,19 @@ public class Woo {
     // Greet the travellers/explorers
     // System.out.println("\nWelcome, Explorer, to the Mysterious Cave of the Unknown.\n");
     System.out.println(ANSI_GREEN + "\nWelcome, Explorer, to the Mysterious Cave of the Unknown.\n" + ANSI_RESET);
-    Thread.sleep(1000);
+    // Thread.sleep(1000);
+    // Try slowng each message next
 
     // Asks for the player's name
-    System.out.println("What is your name, chosen hero?\n");
+    System.out.println(ANSI_GREEN + "What is your name, chosen hero?\n" + ANSI_RESET);
     Scanner in = new Scanner(System.in);
     String response = in.nextLine();
     System.out.println("\n" + rpg.heroName(response) + "\n");
 
     // Asks if player wants to play. Valid responses are "yes" and "no"
-    System.out.println("Do you wish to procede?\n");
+    System.out.println(ANSI_GREEN + "Do you wish to procede?\n" + ANSI_RESET);
     response = in.nextLine();
+    // System.out.println("==========================================================");
     rpg.starting(response);
   }
 }

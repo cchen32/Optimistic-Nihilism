@@ -15,6 +15,13 @@ public class Maze{
   final private char EXIT = '$';
   final private char SWORD = 's';
 
+  public static final String ANSI_RESET = "\u001B[0m";
+  public static final String ANSI_RED = "\u001B[31m";
+  public static final String ANSI_GREEN = "\u001B[32m";
+  public static final String ANSI_YELLOW = "\u001B[33m";
+  public static final String ANSI_BLUE = "\u001B[34m";
+  public static final String ANSI_PURPLE = "\u001B[35m";
+
   public Maze(String mfile){
     _maze = new char[128][128];
     h = 0;
