@@ -1,3 +1,6 @@
+// Optimistic-Nihilism
+// Corina Chen (Binktop) and Nicole Zhou (Duck)
+
 public class Item{
   // Instance variables
   protected int _healthBoost;

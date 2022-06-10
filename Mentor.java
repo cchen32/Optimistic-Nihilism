@@ -1,3 +1,6 @@
+// Optimistic-Nihilism
+// Corina Chen (Binktop) and Nicole Zhou (Duck)
+
 public class Mentor{
   private String _name;
   private String _message;

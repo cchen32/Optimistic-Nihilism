@@ -1,3 +1,6 @@
+// Optimistic-Nihilism
+// Corina Chen (Binktop) and Nicole Zhou (Duck)
+
 public class Dragon extends Monster{
   protected int _scale;
 

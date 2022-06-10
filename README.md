@@ -1,5 +1,5 @@
 # Optimistic-Nihilism
-### Corina Chen (Binktop) amd Nicole Zhou (Duck)
+### Corina Chen (Binktop) and Nicole Zhou (Duck)
 
 #### Project Description
 You are in a maze, and you have to get out. In this Deep Dark Mysterious Maze, you face

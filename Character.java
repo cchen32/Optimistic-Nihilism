@@ -1,3 +1,6 @@
+// Optimistic-Nihilism
+// Corina Chen (Binktop) and Nicole Zhou (Duck)
+
 public class Character{
   protected int _health;
   protected int _attack;

@@ -1,3 +1,6 @@
+// Optimistic-Nihilism
+// Corina Chen (Binktop) and Nicole Zhou (Duck)
+
 import java.util.Stack;
 import java.util.Scanner;
 import java.lang.Math;
