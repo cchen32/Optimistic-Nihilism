@@ -37,7 +37,7 @@ public class Maze{
       Scanner sc = new Scanner(myMaze);
       int row = 0;
        while (sc.hasNext()){
-         String line = + sc.nextLine();
+         String line = sc.nextLine();
          if (w < line.length()){
            w = line.length();
          }
