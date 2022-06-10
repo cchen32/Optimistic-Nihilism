@@ -127,6 +127,10 @@ public class Game{
       System.out.println(ANSI_YELLOW + "\nGearing up Level 1" + ANSI_RESET);
       startGame("04.maze");
     }
+    else{
+      System.out.println(ANSI_RED + "That is not a choice. Please reconsider." + ANSI_RESET);
+      mazeDecision();
+    }
   }
 
   // Asking for further instructions in regards to how to run the maze in the case they did not read the instructions.
@@ -140,9 +144,16 @@ public class Game{
       System.out.println(ANSI_BLUE + "Pressing 's' will go down" + ANSI_RESET);
       System.out.println(ANSI_BLUE + "Pressing 'd' will go left" + ANSI_RESET);
       System.out.println(ANSI_BLUE + "Pressing 'a' will go right\n" + ANSI_RESET);
-      // System.out.println(ANSI_YELLOW + "Good luck and may the odds be ever in your favor" + ANSI_RESET);
+      System.out.println(ANSI_YELLOW + "Good luck and may the odds be ever in your favor" + ANSI_RESET);
     }
-    System.out.println(ANSI_YELLOW + "Good luck and may the odds be ever in your favor" + ANSI_RESET);
+    else if (findKeyword(res, "no") >= 0) {
+      System.out.println(ANSI_YELLOW + "\nAlright best of luck, my friend." + ANSI_RESET);
+    }
+    else {
+      System.out.println(ANSI_RED + "\nNot a choice. Yes or no?" + ANSI_RESET);
+      askInstructions();
+    }
+    // System.out.println(ANSI_YELLOW + "\nGood luck and may the odds be ever in your favor." + ANSI_RESET);
     System.out.println("================================================");
   }
 
