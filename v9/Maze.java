@@ -200,7 +200,7 @@ public class Maze{
       maze[row(maze)][column(maze)] = PATH;
       System.out.println(this);
       System.out.println("YOU HAVE WON THE CHALLENGE!");
-      System.out.println("[Unbeknownst to you, the system smirked wickedly in silence.]");
+      System.out.println("\n[Unbeknownst to you, the system smirked wickedly in silence.]");
     }
     else if (validPath && !reachExit){
       maze[row(maze)][column(maze)] = PATH;
@@ -219,7 +219,7 @@ public class Maze{
 
   // Encounters a monster
   public void monsterEncounter(Monster mob){
-    System.out.println("Would you like to use an item?");
+    System.out.println("Would you like to use an item?\n");
     Scanner in = new Scanner(System.in);
     String response = in.nextLine();
     if (findKeyword(response, "yes") >= 0){
@@ -235,7 +235,7 @@ public class Maze{
       }
     }
     else{
-      System.out.println("No item shall be used.");
+      System.out.println("\nNo item shall be used.");
       fight(mc, mob);
     }
   }
@@ -247,7 +247,7 @@ public class Maze{
 
   // Ask about attack types
   public void askAttack(Hero player, Monster mob){
-    System.out.println("Your choices are: elbow, punch, kick, poke, pinch, tickle.");
+    System.out.println("\nYour choices are: elbow, punch, kick, poke, pinch, tickle.");
     Scanner in = new Scanner(System.in);
     String response = in.nextLine();
     if (findKeyword(response, "elbow") >= 0){
@@ -277,7 +277,7 @@ public class Maze{
   // Fight between the player and the monster until one side has died
   public void fight(Hero player, Monster mob){
     while (player.isAlive() && mob.isAlive()){
-      System.out.println("Your health is " + player.getHealth());
+      System.out.println("\nYour health is " + player.getHealth());
       System.out.println("The monster's health is " + mob.getHealth());
       askAttack(player, mob);
       if (mob.isAlive()){
@@ -285,13 +285,13 @@ public class Maze{
       }
     }
     if (player.isAlive() && !mob.isAlive()){
-      System.out.println("You have slain the monster!");
+      System.out.println(ANSI_YELLOW + "\nYou have slain the monster!" ANSI_RESET);
     }
     else if (mob.isAlive() && !player.isAlive()){
-      System.out.println("K.O. Your journey ends here. RIP.");
+      System.out.println(ANSI_RED + "\nK.O. Your journey ends here. RIP." ANSI_RESET);
     }
     else{
-      System.out.println("Both sides have died. GG.");
+      System.out.println(ANSI_GREEN + "\nBoth sides have died. GG." + ANSI_RESET);
     }
   }
 
