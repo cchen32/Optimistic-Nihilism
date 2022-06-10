@@ -156,7 +156,6 @@ public class Game{
       System.out.println(ANSI_RED + "\nNot a choice. Yes or no?" + ANSI_RESET);
       askInstructions();
     }
-    // System.out.println(ANSI_YELLOW + "\nGood luck and may the odds be ever in your favor." + ANSI_RESET);
     System.out.println("================================================");
   }
 

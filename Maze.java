@@ -26,8 +26,7 @@ public class Maze{
   public static final String ANSI_RED = "\u001B[31m";
   public static final String ANSI_GREEN = "\u001B[32m";
   public static final String ANSI_YELLOW = "\u001B[33m";
-  // public static final String ANSI_BLUE = "\u001B[34m";
-  // public static final String ANSI_PURPLE = "\u001B[35m";
+  public static final String ANSI_BLUE = "\u001B[34m";
   public static final String ANSI_GRAY = "\u001b[30;1m";
 
   public Maze(String mfile){
@@ -176,24 +175,24 @@ public class Maze{
       validPath = mc.isAlive();
     }
     else if(maze[x][y] == MENTOR){
-      String message = ANSI_RED + "Careful, danger is much more closer than you think it is." + ANSI_RESET;
+      String message = ANSI_RED + "\nCareful, danger is much more closer than you think it is." + ANSI_RESET;
       Mentor allknowingMentor = new Mentor("All-knowing Mentor", message);
       mentorEncounter(allknowingMentor);
     }
     else if (maze[x][y] == SWORD){
       Item newSword = new Sword();
       mc.addItem(newSword);
-      System.out.println(ANSI_GREEN + "You have chosen to collect " + newSword.getName() + "." + ANSI_RESET);
+      System.out.println(ANSI_GREEN + "\nYou have chosen to collect " + newSword.getName() + "." + ANSI_RESET);
     }
     else if (maze[x][y] == HEALTH_POTION){
       Item hpBoost = new Potion();
       mc.addItem(hpBoost);
-      System.out.println(ANSI_GREEN + "You have chosen to collect " + hpBoost.getName() + "." + ANSI_RESET);
+      System.out.println(ANSI_GREEN + "\nYou have chosen to collect " + hpBoost.getName() + "." + ANSI_RESET);
     }
     else if (maze[x][y] == HOLY_SWORD){
       Item legendarySword = new HolySword();
       mc.addItem(legendarySword);
-      System.out.println(ANSI_GREEN + "You have chosen to collect " + legendarySword.getName() + "." + ANSI_RESET);
+      System.out.println(ANSI_GREEN + "\nYou have chosen to collect " + legendarySword.getName() + "." + ANSI_RESET);
     }
     // use "else if" for more cases of chosen path (e.g. monster encounter)
 
@@ -202,8 +201,8 @@ public class Maze{
     if (validPath && reachExit){
       maze[row(maze)][column(maze)] = PATH;
       System.out.println(this);
-      System.out.println("YOU HAVE WON THE CHALLENGE!");
-      System.out.println("[Unbeknownst to you, the system smirked wickedly in silence.]");
+      System.out.println(ANSI_YELLOW + "YOU HAVE WON THE CHALLENGE!" + ANSI_RESET);
+      System.out.println(ANSI_GREEN + "[Unbeknownst to you, the system smirked wickedly in silence.]" + ANSI_RESET);
     }
     else if (validPath && !reachExit){
       maze[row(maze)][column(maze)] = PATH;
@@ -212,7 +211,7 @@ public class Maze{
     }
     else{
       System.out.println(this);
-      System.out.println("You cannot move on further.");
+      System.out.println(ANSI_GREEN + "You cannot move on further." + ANSI_RESET);
     }
   }
 
@@ -222,12 +221,12 @@ public class Maze{
 
   // Encounters a monster
   public void monsterEncounter(Monster mob){
-    System.out.println("Would you like to use an item?");
+    System.out.println(ANSI_GREEN + "Would you like to use an item?\n" + ANSI_RESET);
     Scanner in = new Scanner(System.in);
     String response = in.nextLine();
     if (findKeyword(response, "yes") >= 0){
       if (mc.emptyInventory()){
-        System.out.println("You have an empty inventory.");
+        System.out.println(ANSI_GREEN + "\nYou have an empty inventory." + ANSI_RESET);
         fight(mc, mob);
       }
       else{
@@ -238,7 +237,7 @@ public class Maze{
       }
     }
     else{
-      System.out.println("No item shall be used.");
+      System.out.println(ANSI_GREEN + "\nNo item shall be used." + ANSI_RESET);
       fight(mc, mob);
     }
   }
@@ -250,7 +249,7 @@ public class Maze{
 
   // Ask about attack types
   public void askAttack(Hero player, Monster mob){
-    System.out.println("Your choices are: elbow, punch, kick, poke, pinch, tickle.");
+    System.out.println(ANSI_GREEN + "\nYour choices are: elbow, punch, kick, poke, pinch, tickle.\n" + ANSI_RESET);
     Scanner in = new Scanner(System.in);
     String response = in.nextLine();
     if (findKeyword(response, "elbow") >= 0){
@@ -280,21 +279,21 @@ public class Maze{
   // Fight between the player and the monster until one side has died
   public void fight(Hero player, Monster mob){
     while (player.isAlive() && mob.isAlive()){
-      System.out.println("Your health is " + player.getHealth());
-      System.out.println("The monster's health is " + mob.getHealth());
+      System.out.println("\nYour health is " + ANSI_BLUE + player.getHealth() + ANSI_RESET + ".");
+      System.out.println("The monster's health is " + ANSI_BLUE + mob.getHealth() + ANSI_RESET + ".");
       askAttack(player, mob);
       if (mob.isAlive()){
         mob.attack(player);
       }
     }
     if (player.isAlive() && !mob.isAlive()){
-      System.out.println("You have slain the monster!");
+      System.out.println(ANSI_YELLOW + "\nYou have slain the monster!" + ANSI_RESET);
     }
     else if (mob.isAlive() && !player.isAlive()){
-      System.out.println("K.O. Your journey ends here. RIP.");
+      System.out.println(ANSI_RED + "\nK.O. Your journey ends here. RIP." + ANSI_RESET);
     }
     else{
-      System.out.println("Both sides have died. GG.");
+      System.out.println(ANSI_GREEN + "\nBoth sides have died. GG." + ANSI_RESET);
     }
   }
 
