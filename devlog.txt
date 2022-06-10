@@ -6,32 +6,6 @@ pd 6
 Maze RPG
 
 
-/////////// Zone of Reflection \\\\\\\\\\\
-------------------------------------------
-OBSTACLES OVERCOME
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow we so BOSS bc...
-
-UNRESOLVED ISSUES
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
-
-COOL STUFF LEARNED
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow! oo!...
-
-MID-DEVELOPMENT DESIGN CHANGES
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-we changed ___ to ___ bc...
-
-LESSONS LEARNED
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tales of wisdom gained...
-||||||||||||||||||||||||||||||||||||||||||
-
-
-
  ______   ______   __   __   __       ______   _______
 /_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
 \:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
@@ -140,4 +114,6 @@ tales of wisdom gained...
 * Got the colors down!
 * Work on them chars colors
 * some more suspicious stuffs such as reorganizing how everything looks now
+* Added more features to the game
+* Updated READ.md and uml.pdf
 ==============================================================
