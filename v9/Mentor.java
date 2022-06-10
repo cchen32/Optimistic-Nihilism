@@ -14,5 +14,4 @@ public class Mentor{
   public String getMessage(){
     return _message;
   }
-
 }

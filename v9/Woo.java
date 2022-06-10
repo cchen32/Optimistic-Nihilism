@@ -11,7 +11,7 @@ public class Woo {
 
     // Greet the travellers/explorers
     // System.out.println("\nWelcome, Explorer, to the Mysterious Cave of the Unknown.\n");
-    System.out.println(ANSI_GREEN + "\nWelcome, Explorer, to the Mysterious Cave of the Unknown.\n" + ANSI_RESET);
+    System.out.println(ANSI_GREEN + "\nWelcome, Explorer, to the Mysterious Cave of the Unknown." + ANSI_RESET);
     // Thread.sleep(1000);
     // Try slowng each message next
 
@@ -19,7 +19,7 @@ public class Woo {
     System.out.println(ANSI_GREEN + "What is your name, chosen hero?\n" + ANSI_RESET);
     Scanner in = new Scanner(System.in);
     String response = in.nextLine();
-    System.out.println("\n" + rpg.heroName(response) + "\n");
+    System.out.println("\n" + rpg.heroName(response));
 
     // Asks if player wants to play. Valid responses are "yes" and "no"
     System.out.println(ANSI_GREEN + "Do you wish to procede?\n" + ANSI_RESET);

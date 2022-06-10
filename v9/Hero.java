@@ -95,33 +95,6 @@ public class Hero extends Character{
     return damage;
   }
 
-  // public void askAttack(){
-  //   System.out.println("Your choices are: elbow, punch, kick, poke, pinch, tickle.");
-  //   Scanner in = new Scanner(System.in);
-  //   String response = in.nextLine();
-  //   if (findKeyword(response, "elbow") >= 0){
-  //
-  //   }
-  //   else if (findKeyword(response, "punch") >= 0){
-  //
-  //   }
-  //   else if (findKeyword(response, "kick") >= 0){
-  //
-  //   }
-  //   else if (findKeyword(response, "poke") >= 0){
-  //
-  //   }
-  //   else if (findKeyword(response, "pinch") >= 0){
-  //
-  //   }
-  //   else if (findKeyword(response, "tickle") >= 0){
-  //
-  //   }
-  //   else {
-  //     System.out.println("We will resort to default attack.");
-  //   }
-  // }
-
   public int findKeyword(String statement, String goal, int startPos){
     String phrase = statement.trim().toLowerCase();
     goal = goal.toLowerCase();

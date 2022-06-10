@@ -14,6 +14,10 @@ public class Maze{
   final private char WALL = ' ';
   final private char EXIT = '$';
   final private char SWORD = 's';
+  final private char MENTOR = 'm';
+  final private char DRAGON = 'd';
+  final private char HEALTH_POTION = '+';
+  final private char HOLY_SWORD = '*';
 
   public static final String ANSI_RESET = "\u001B[0m";
   public static final String ANSI_RED = "\u001B[31m";
@@ -163,20 +167,30 @@ public class Maze{
       validPath = true;
       reachExit = false;
     }
-    else if (maze[x][y] == 'd'){
+    else if (maze[x][y] == DRAGON){
       Monster dragQueen = new Dragon();
       monsterEncounter(dragQueen);
       validPath = mc.isAlive();
     }
-    else if(maze[x][y] == 'm'){
-      String message = ANSI_RED + "Hope you survive, KAKAKAKAKAKAKAKA" + ANSI_RESET;
-      Mentor boringMentor = new Mentor("boring mentor", message);
-      mentorEncounter(boringMentor);
+    else if(maze[x][y] == MENTOR){
+      String message = ANSI_RED + "Careful, keep your eyes open." + ANSI_RESET;
+      Mentor allknowingMentor = new Mentor("All-knowing Mentor", message);
+      mentorEncounter(allknowingMentor);
     }
     else if (maze[x][y] == SWORD){
       Item newSword = new Sword();
       mc.addItem(newSword);
       System.out.println(ANSI_GREEN + "You have chosen to collect " + newSword.getName() + "." + ANSI_RESET);
+    }
+    else if (maze[x][y] == HEALTH_POTION){
+      Item hpBoost = new Potion();
+      mc.addItem(hpBoost);
+      System.out.println(ANSI_GREEN + "You have chosen to collect " + hpBoost.getName() + "." + ANSI_RESET);
+    }
+    else if (maze[x][y] == HOLY_SWORD){
+      Item legendarySword = new HolySword();
+      mc.addItem(legendarySword);
+      System.out.println(ANSI_GREEN + "You have chosen to collect " + legendarySword.getName() + "." + ANSI_RESET);
     }
     // use "else if" for more cases of chosen path (e.g. monster encounter)
 
@@ -186,6 +200,7 @@ public class Maze{
       maze[row(maze)][column(maze)] = PATH;
       System.out.println(this);
       System.out.println("YOU HAVE WON THE CHALLENGE!");
+      System.out.println("[Unbeknownst to you, the system smirked wickedly in silence.]");
     }
     else if (validPath && !reachExit){
       maze[row(maze)][column(maze)] = PATH;
