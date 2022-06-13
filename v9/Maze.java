@@ -285,10 +285,10 @@ public class Maze{
       }
     }
     if (player.isAlive() && !mob.isAlive()){
-      System.out.println(ANSI_YELLOW + "\nYou have slain the monster!" ANSI_RESET);
+      System.out.println(ANSI_YELLOW + "\nYou have slain the monster!" + ANSI_RESET);
     }
     else if (mob.isAlive() && !player.isAlive()){
-      System.out.println(ANSI_RED + "\nK.O. Your journey ends here. RIP." ANSI_RESET);
+      System.out.println(ANSI_RED + "\nK.O. Your journey ends here. RIP." + ANSI_RESET);
     }
     else{
       System.out.println(ANSI_GREEN + "\nBoth sides have died. GG." + ANSI_RESET);
